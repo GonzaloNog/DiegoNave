@@ -312,8 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fe597b7e73a03498fc521820299fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: 19
-  endPoint: -22
+  startPoint: 28
+  endPoint: -25
   speed: 3
 --- !u!1 &1061803995
 GameObject:
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fe597b7e73a03498fc521820299fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: 19
-  endPoint: -22
+  startPoint: 28
+  endPoint: -25
   speed: 3
 --- !u!1 &1234548723
 GameObject:
