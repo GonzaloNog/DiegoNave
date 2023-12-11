@@ -670,6 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  lifePoints: 100
   fire: {fileID: 1061803995}
 --- !u!212 &1270369382
 SpriteRenderer:
@@ -732,7 +733,7 @@ Transform:
   m_GameObject: {fileID: 1270369379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -8.01, y: -0.14, z: -4.58}
+  m_LocalPosition: {x: -8.01, y: 0, z: -4.58}
   m_LocalScale: {x: 2.043, y: 2.043, z: 2.043}
   m_ConstrainProportionsScale: 0
   m_Children:
