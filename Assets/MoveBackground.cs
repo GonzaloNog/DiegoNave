@@ -9,7 +9,7 @@ public class MoveBackground : MonoBehaviour
     public float speed;//definimos la velocidad en la que queremos que se mueva el fondo
 
     void Update()
-    {
+    { 
         this.transform.position = new Vector2(this.transform.position.x - ((speed * LevelManager.instance.backGroundSpeed) * Time.deltaTime), this.transform.position.y);//movemos en cada frame la imagen en direccion x, se usa TimeDeltaTime, para que se mueva a la misma velocidad siempre indistintamente de la PC
         if (this.transform.position.x < endPoint)//si su posicion es menor a la posicion de endPoint reseteamos el fondo 
             restart();

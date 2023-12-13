@@ -12,8 +12,8 @@ public class misil : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime);//Translate lo que hace es mover nuestro objeto en una direccion fija, para eso lo multiplicamos por la speed y por el time delta time para que se vea siempre igual
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)//Funcion interna de unity que comprueba la colicion con un objeto 2D
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject);//destruye este objeto cuando coliciona con cualquier objeto que tenga coliciones 2D
     }
 }

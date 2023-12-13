@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterControler : MonoBehaviour
 {
     public float speed; //controla la velocidad de la nave
-    public float lifePoints = 100.0f; //puntos de vida de nuestra nave
+    public int lifePoints = 3; //puntos de vida de nuestra nave
     public GameObject fire; //sprite de fuego para la nave en movimiento
     private Rigidbody2D rb; //variable para guardad una referencia al rigidbody2D de nuestro personaje
     private bool life = true;//variable que determina si nuestra nave sigue viva o fue destruida
@@ -44,11 +44,6 @@ public class CharacterControler : MonoBehaviour
         }
     }
 
-    public void setLifePoints(float points)//esta funcion va a modificar los puntos de vida de la nave y determinar si fue o no destruida
-    {
-        lifePoints += points;//sumamos los puntos pasados a nuestra variable de vida
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "borde")//comprobamos que el tag del objeto contra el que colisionamos, sea un borde del scenario
@@ -60,8 +55,13 @@ public class CharacterControler : MonoBehaviour
         }
         if(collision.gameObject.tag == "enemigo")
         {
-            life = false;
-            Destroy(collision.gameObject);
+            lifePoints--;//vidas player
+            LevelManager.instance.playerLives = lifePoints;//vidas player para UI
+            if (lifePoints <= 0)
+            {
+                LevelManager.instance.dead = true;//nos morimos 
+            }
+            Destroy(collision.gameObject);// la nave enemiga se destruye
         }
     }
 }
